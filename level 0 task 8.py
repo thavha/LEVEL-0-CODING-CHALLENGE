@@ -1,33 +1,36 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[62]:
-
-
 def number_into_hours_and_minutes(number):
-    a= 'hours'
-    b= 'hour'
-    c= 'minute'
-    d= 'minutes'
+   
     hours = number//60
     minutes= number%60
-    if hours > 1 and minutes >1:
-        return (str(hours)+" "+a+" " +str(minutes)+" "+ d)
-    elif hours > 1 and minutes ==1:
-        return (str(hours)+" "+a+" " +str(minutes)+" "+ c)
-    elif hours == 1 and minutes >1:
-        return (str(hours)+" "+b+" " +str(minutes)+" "+ d)
-    elif hours ==0 and minutes ==0:
-        return 0
-    elif hours ==0 and minutes > 1:
-        return (str(minutes)+" "+ d)
-    elif hours ==0 and minutes ==1:
-        return(str(minutes)+" "+ c)
-    elif hours >1 and minutes ==0:
-        return (str(hours)+" "+a)
-    elif hours ==1 and minutes ==0:
-        return (str(hours)+" "+b)
-    elif hours ==1 and minutes >1:
-        return (str(hours)+" "+a+" " +str(minutes)+" "+ d)
-    elif hours ==1 and minutes ==1:
-        return (str(hours)+" "+b+" " +str(minutes)+" "+ c)
+    
+    while hours >= 1:
+        if hours >1:
+            a= 'hours'
+            if minutes >1:
+                d= 'minutes'
+                return (str(hours)+" "+a+" " +str(minutes)+" "+ d)
+            elif minutes ==1:
+                d= 'minute'
+                return (str(hours)+" "+a+" " +str(minutes)+" "+ d)
+            else:
+                return (str(hours)+" "+a)
+        else:
+            a= 'hour' 
+            if minutes >1:
+                d= 'minutes'
+                return (str(hours)+" "+a+" " +str(minutes)+" "+ d)
+            elif minutes ==1:
+                d= 'minute'
+                return (str(hours)+" "+a+" " +str(minutes)+" "+ d)
+            else:
+                return (str(hours)+" "+a)       
+    else:
+        if minutes >1:
+            d= 'minutes'
+            return (str(minutes)+" "+ d)
+        elif minutes ==1:
+            d= 'minute'
+            return  (str(minutes)+" "+ d)
+        else:
+            a ='hour'
+            return (str(hours)+" "+a)

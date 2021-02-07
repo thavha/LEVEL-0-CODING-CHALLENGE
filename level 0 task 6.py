@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 def maximum_number(x,y,z):
     if x>y and x>z:
         return x
@@ -11,4 +5,3 @@ def maximum_number(x,y,z):
         return y
     else:
         return z
-

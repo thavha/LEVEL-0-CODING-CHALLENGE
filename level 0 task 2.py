@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
-
 x = 1 + 1 * 2
 y = (1 + 1) * 2
 z = 1 + ( 1 * 2 )
