@@ -4,6 +4,7 @@ def common_characters(string1,string2):
         
         if i in string2:
             common.append(i)
-            new_common=",".join(common)
+            new_common=", ".join(common)
+    common_sentence = ("Common letters: " + new_common )
                
-    return("Common letters: " + new_common )
+    return common_sentence
