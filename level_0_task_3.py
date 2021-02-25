@@ -1,3 +1,3 @@
 def hello(name):
-    greeting = ("Hello " + name +"!")
+    greeting = f"Hello {name} !"
     return greeting
